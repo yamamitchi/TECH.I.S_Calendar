@@ -13,10 +13,11 @@ class CreateAdministratorsTable extends Migration
      */
     public function up()
     {
+        if (Schema::hasTable('administrators')){return;}
 
         Schema::create('administrators', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->string('email',254)->unique();
+            $table->string('email')->unique();
             $table->string('password',128);
             $table->datetime('created_at')->useCurrent();
             $table->datetime('updated_at')->useCurrent();
