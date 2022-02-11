@@ -46,7 +46,6 @@
         </div>
         <br>
         <div class="item"style="width:53%">
-            @csrf
             <button type="submit" style="font-size: 0.8rem;" class="btn btn--yellow btn--cubic">ログイン</button>
         </div>
 
