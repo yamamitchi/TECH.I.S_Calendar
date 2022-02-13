@@ -22,7 +22,7 @@
         <div class="item">
             <img class="item1" src="img/TECH.png">
         </div>
-       
+
         <form action="chteck" method="post">
         @csrf
         <div class="item">
