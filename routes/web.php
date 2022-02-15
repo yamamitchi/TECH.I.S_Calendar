@@ -28,14 +28,15 @@ Route::get('/Calendar',[App\Http\Controllers\CalendarController::class, 'setEven
 // 管理者用用カレンダー表示 
 Route::get('/Calendar_admin',[App\Http\Controllers\CalendarAdminController::class, 'setEvents']) ;
 
+
 //ユーザー用//
 
 Route::get('/',[TechController::class,'index']);
-Route::get('login', [TechController::class,'getLog']);
-Route::get('New_sain', [TechController::class,'getNew']);
+Route::get('/login', [TechController::class,'getLog']);
+Route::get('/New_sain', [TechController::class,'getNew']);
 // Route::get('/calendar', [TechController::class,'getCalendar']);
-Route::get('Not_Calendar', [TechController::class,'getCalendar_not']);
-Route::get('goal_input', [TechController::class,'getgoal']);
+Route::get('/Not_Calendar', [TechController::class,'getCalendar_not']);
+Route::get('/goal_input', [TechController::class,'getgoal']);
 
 
 //管理者用//
@@ -50,31 +51,31 @@ Route::group(['middleware' => 'basicauth'], function() {
 
 //DBへのアドレス・PASSの登録 //
 Route::post('/new_add',[TechController::class,'add']);
-Route::post('chteck',[TechController::class,'chtecktest']);
-Route::get('chteck',[TechController::class,'chtecktest']);
+Route::post('/chteck',[TechController::class,'chtecktest']);
+Route::get('/chteck',[TechController::class,'chtecktest']);
 //管理者新規追加//
-Route::post('admin_add',[TechController::class,'admin_add_1']);
+Route::post('/admin_add',[TechController::class,'admin_add_1']);
 Route::post('/admin_check',[TechController::class,'admin_check']);
 
-//ユーザー用//
+// //ユーザー用//
 
-Route::get('/',[TechController::class,'index']);
-Route::get('login', [TechController::class,'getLog']);
-Route::get('New_sain', [TechController::class,'getNew']);
-//Route::get('Calendar', [TechController::class,'getCalendar']);
-Route::get('Back', [TechController::class,'BackCalendar']);
-Route::get('getCalendar', [TechController::class,'getCalendar_admin']);
-//Route::get('Calendar_viwe', [TechController::class,'calender_view']);
-Route::get('goal_input', [TechController::class,'getgoal']);
+// Route::get('/',[TechController::class,'index']);
+// Route::get('login', [TechController::class,'getLog']);
+// Route::get('New_sain', [TechController::class,'getNew']);
+// //Route::get('Calendar', [TechController::class,'getCalendar']);
+// Route::get('Back', [TechController::class,'BackCalendar']);
+// Route::get('getCalendar', [TechController::class,'getCalendar_admin']);
+// //Route::get('Calendar_viwe', [TechController::class,'calender_view']);
+// Route::get('goal_input', [TechController::class,'getgoal']);
 
 
-//管理者用//
-Route::group(['middleware' => 'basicauth'], function() {
-    Route::get('admin', [TechController::class,'getAdmin']);
-    Route::get('login_admin', [TechController::class,'getAdmin_login']);
-    Route::get('sain_admin', [TechController::class,'getAdmin_sain']);
-    Route::get('admin', [App\Http\Controllers\TechController::class, 'getAdmin'])->name('top');
-    });
+// //管理者用//
+// Route::group(['middleware' => 'basicauth'], function() {
+//     Route::get('admin', [TechController::class,'getAdmin']);
+//     Route::get('login_admin', [TechController::class,'getAdmin_login']);
+//     Route::get('sain_admin', [TechController::class,'getAdmin_sain']);
+//     Route::get('admin', [App\Http\Controllers\TechController::class, 'getAdmin'])->name('top');
+//     });
 
 //予定・実績・イベント登録
 Route::post('goal_input/{date}', [App\Http\Controllers\Learning_planController::class, 'edit']);
