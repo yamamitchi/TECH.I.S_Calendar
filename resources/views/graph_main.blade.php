@@ -49,7 +49,7 @@
 
 </div>
 <?php
-use App\Models\learning_record;
+use App\Models\Learning_record;
 
 $count_A=0;
 $count_A_1=0;
@@ -68,7 +68,7 @@ $count_C_1=0;
 $count_C_2=0;
 
 
-$user_records = learning_record::where('user_id',$user_id) -> first();
+$user_records = Learning_record::where('user_id',$user_id) -> first();
 // 基礎課題
 $id_pass_1=$user_records->A_1_1;	
 $id_pass_2=$user_records->A_1_2;
