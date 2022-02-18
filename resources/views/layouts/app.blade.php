@@ -1,19 +1,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script src="{{ asset('/js/fullcalendar/core/main.js')}}"></script>
-<script src="{{ asset('/js/fullcalendar/daygrid/main.js')}}"></script>
-<script src="{{ asset('/js/fullcalendar/interaction/main.js')}}"></script>
-<script src="{{ asset('/js/fullcalendar/timegrid/main.js')}}"></script>
-<script src="{{ asset('/js/fullcalendar/list/main.js')}}"></script>
+<script src=require_once __DIR__ . ('/js/fullcalendar/core/main.js')></script>
+<script src=require_once __DIR__ . ('/js/fullcalendar/daygrid/main.js')></script>
+<script src=require_once __DIR__ . ('/js/fullcalendar/interaction/main.js')></script>
+<script src=require_once __DIR__ . ('/js/fullcalendar/timegrid/main.js')></script>
+<script src=require_once __DIR__ . ('/js/fullcalendar/list/main.js')></script>
 
-<script src="{{ asset('/js/ajax-setup.js')}}"></script>
+<script src=require_once __DIR__ . ("/js/ajax-setup.js")></script>
 <!-- <script src='/js/fullcalendar.js'></script> -->
-<script src="{{ asset('/js/event-control.js')}}"></script>
+<script src=require_once __DIR__ . ('/js/event-control.js')></script>
 
-<link href="{{ asset('/css/fullcalendar/core/main.css')}}" type="text/css" rel='stylesheet' />
-<link href="{{ asset('/css/fullcalendar/daygrid/main.css')}}" type="text/css" rel='stylesheet' />
-<link href="{{ asset('/css/fullcalendar/timegrid/main.css')}}" type="text/css" rel='stylesheet' />
-<link href="{{ asset('/css/fullcalendar/list/main.css')}}" type="text/css" rel='stylesheet' />
+<link href=require_once __DIR__ . ('/css/fullcalendar/core/main.css') type="text/css" rel='stylesheet' />
+<link href=require_once __DIR__ . ('/css/fullcalendar/daygrid/main.css') type="text/css" rel='stylesheet' />
+<link href=require_once __DIR__ . ('/css/fullcalendar/timegrid/main.css') type="text/css" rel='stylesheet' />
+<link href=require_once __DIR__ . ('/css/fullcalendar/list/main.css') type="text/css" rel='stylesheet' />
 <style>
         @media screen and (max-width: 767px){
             .fc-toolbar h2 {
