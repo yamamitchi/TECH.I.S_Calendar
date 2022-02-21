@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 // use resources\views;
 use Illuminate\Http\Request;
 use App\Models\Administrators;
-use App\Models\learning_plan;
-use App\Models\learning_record;
+use App\Models\Learning_plan;
+use App\Models\Learning_record;
 use App\Models\User;
 
 
@@ -178,8 +178,8 @@ class TechController extends Controller
         'user_id' => $id_pass,
       ];
 
-        learning_plan::insert($date_user);
-        learning_record::insert($date_user);
+        Learning_plan::insert($date_user);
+        Learning_record::insert($date_user);
         return redirect('/')->with('flash_message', '登録が完了しました。');
 }
 
