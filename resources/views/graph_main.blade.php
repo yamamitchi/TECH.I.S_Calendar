@@ -69,8 +69,6 @@ $count_C_2=0;
 
 
 $user_records = Learning_record::where('user_id',$user_id) -> first();
-var_dump($user_records);
-exit;
 // 基礎課題
 $id_pass_1=$user_records->A_1_1;	
 $id_pass_2=$user_records->A_1_2;
