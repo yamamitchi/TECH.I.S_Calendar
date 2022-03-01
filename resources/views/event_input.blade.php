@@ -97,8 +97,8 @@
     	'minTime': '10:00',
     	'maxTime': '22:00',
     });
-    $('.time').timepicker('option', 'step', '30');
-    $('.time').timepicker('option', 'timeFormat', 'H:i');
+    // $('.time').timepicker('option', 'step', '30');
+    // $('.time').timepicker('option', 'timeFormat', 'H:i');
 
     </script>
     <style>
