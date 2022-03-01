@@ -96,7 +96,7 @@
         $('.time').timepicker({
     	'minTime': '10:00',
     	'maxTime': '22:00',
-      datepicker:false,
+      'datepicker':'false',
     });
 
     </script>
