@@ -51,7 +51,7 @@
                     </div>
                     <div class="time_input">
                         <h3>終了時間</h3>
-                        <input type="text"  step="900" name="end_time" class="time end" value="{{ old('end_time') }}">
+                        <input type="text" min="09：00" max="17：30" step="900" name="end_time" class="time end" value="{{ old('end_time') }}">
                     </div>
                 </div>
                 <div class="item-input">
@@ -96,6 +96,7 @@
         $('.time').timepicker({
     	'minTime': '10:00',
     	'maxTime': '22:00',
+      datepicker:false,
     });
 
     </script>
